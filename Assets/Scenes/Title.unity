@@ -1677,6 +1677,7 @@ GameObject:
   - component: {fileID: 629267911}
   - component: {fileID: 629267913}
   - component: {fileID: 629267912}
+  - component: {fileID: 629267914}
   m_Layer: 5
   m_Name: ModePanel
   m_TagString: Untagged
@@ -1746,6 +1747,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629267910}
   m_CullTransparentMesh: 1
+--- !u!114 &629267914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629267910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a80bfb608a5c4f42b9ddf52404bb88f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftButton: {fileID: 1201171242}
+  rightButton: {fileID: 1123676633}
+  selectedText: {fileID: 710173934}
 --- !u!1 &641766923
 GameObject:
   m_ObjectHideFlags: 0
@@ -3923,7 +3939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1757046848
 MonoBehaviour:
   m_ObjectHideFlags: 0
