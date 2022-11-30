@@ -79,6 +79,10 @@
         {
             "id": 20,
             "name": "内山昂輝"
+        },
+        {
+            "id": 21,
+            "name": "内田雄馬"
         }
     ],
     "clips": [
@@ -586,6 +590,211 @@
             "id": 101,
             "anime": 2,
             "character": 1
+        },
+        {
+            "id": 102,
+            "anime": 2,
+            "character": 4
+        },
+        {
+            "id": 103,
+            "anime": 2,
+            "character": 9
+        },
+        {
+            "id": 104,
+            "anime": 2,
+            "character": 1
+        },
+        {
+            "id": 105,
+            "anime": 2,
+            "character": 2
+        },
+        {
+            "id": 106,
+            "anime": 2,
+            "character": 7
+        },
+        {
+            "id": 107,
+            "anime": 2,
+            "character": 9
+        },
+        {
+            "id": 108,
+            "anime": 2,
+            "character": 2
+        },
+        {
+            "id": 109,
+            "anime": 2,
+            "character": 1
+        },
+        {
+            "id": 110,
+            "anime": 2,
+            "character": 7
+        },
+        {
+            "id": 111,
+            "anime": 2,
+            "character": 1
+        },
+        {
+            "id": 112,
+            "anime": 2,
+            "character": 1
+        },
+        {
+            "id": 113,
+            "anime": 2,
+            "character": 4
+        },
+        {
+            "id": 114,
+            "anime": 2,
+            "character": 5
+        },
+        {
+            "id": 115,
+            "anime": 2,
+            "character": 2
+        },
+        {
+            "id": 116,
+            "anime": 2,
+            "character": 9
+        },
+        {
+            "id": 117,
+            "anime": 2,
+            "character": 10
+        },
+        {
+            "id": 118,
+            "anime": 2,
+            "character": 9
+        },
+        {
+            "id": 119,
+            "anime": 2,
+            "character": 6
+        },
+        {
+            "id": 120,
+            "anime": 2,
+            "character": 6
+        },
+        {
+            "id": 121,
+            "anime": 2,
+            "character": 5
+        },
+        {
+            "id": 122,
+            "anime": 2,
+            "character": 2
+        },
+        {
+            "id": 123,
+            "anime": 2,
+            "character": 2
+        },
+        {
+            "id": 124,
+            "anime": 2,
+            "character": 1
+        },
+        {
+            "id": 125,
+            "anime": 2,
+            "character": 1
+        },
+        {
+            "id": 126,
+            "anime": 2,
+            "character": 1
+        },
+        {
+            "id": 127,
+            "anime": 2,
+            "character": 7
+        },
+        {
+            "id": 128,
+            "anime": 2,
+            "character": 5
+        },
+        {
+            "id": 129,
+            "anime": 2,
+            "character": 4
+        },
+        {
+            "id": 130,
+            "anime": 2,
+            "character": 4
+        },
+        {
+            "id": 131,
+            "anime": 2,
+            "character": 9
+        },
+        {
+            "id": 132,
+            "anime": 2,
+            "character": 10
+        },
+        {
+            "id": 133,
+            "anime": 2,
+            "character": 4
+        },
+        {
+            "id": 134,
+            "anime": 2,
+            "character": 8
+        },
+        {
+            "id": 135,
+            "anime": 2,
+            "character": 9
+        },
+        {
+            "id": 136,
+            "anime": 2,
+            "character": 10
+        },
+        {
+            "id": 137,
+            "anime": 2,
+            "character": 1
+        },
+        {
+            "id": 138,
+            "anime": 2,
+            "character": 10
+        },
+        {
+            "id": 139,
+            "anime": 2,
+            "character": 1
+        },
+        {
+            "id": 140,
+            "anime": 2,
+            "character": 2
+        },
+        {
+            "id": 141,
+            "anime": 2,
+            "character": 7
+        },
+        {
+            "id": 142,
+            "anime": 2,
+            "character": 2
         }
     ],
     "animes": [
@@ -649,6 +858,11 @@
             "id": 2,
             "title": "擅長捉弄人的高木同學",
             "characters": [
+                {
+                    "cv": 21,
+                    "id": 11,
+                    "name": "中井"
+                },
                 {
                     "cv": 20,
                     "id": 10,

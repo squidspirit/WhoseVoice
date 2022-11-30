@@ -1214,6 +1214,7 @@ MonoBehaviour:
   leftButton: {fileID: 1201171242}
   rightButton: {fileID: 1123676633}
   selectedText: {fileID: 710173934}
+  initSelected: 0
   selections:
   - "\u731C\u8072\u512A"
   - "\u731C\u89D2\u8272"
@@ -2625,7 +2626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1757046848
 MonoBehaviour:
   m_ObjectHideFlags: 0
