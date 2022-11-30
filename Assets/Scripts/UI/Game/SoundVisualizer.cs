@@ -67,7 +67,6 @@ public class SoundVisualizer : MonoBehaviour {
         if (Application.platform == RuntimePlatform.WebGLPlayer)
             return;
 
-        Debug.Log(bars[0].GetComponent<RectTransform>().rect.width);
         AnalyzeSound();
         Normalize();
         for (int i = 0; i < barCount; i ++) {

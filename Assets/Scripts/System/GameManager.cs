@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
     public Canvas playingCanvas;
@@ -26,12 +27,12 @@ public class GameManager : MonoBehaviour {
             timer -= Time.deltaTime;
     }
 
-    public void GamePause() {
+    public void Pause() {
         Time.timeScale = 0;
         pausingCanvas.gameObject.SetActive(true);
     }
 
-    public void GameResume() {
+    public void Resume() {
         Time.timeScale = 1;
         pausingCanvas.gameObject.SetActive(false);
     }
@@ -39,5 +40,9 @@ public class GameManager : MonoBehaviour {
     public void GameOver() {
         resultCanvas.gameObject.SetActive(true);
         playingCanvas.gameObject.SetActive(false);
+    }
+
+    public void Title() {
+        SceneManager.LoadScene("Title");
     }
 }

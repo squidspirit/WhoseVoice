@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Result : MonoBehaviour
+public class ResultCanvas : MonoBehaviour
 {
     public TextMeshProUGUI scoreNumberText;
+    public Button quitButton;
 
     private GameObject eventSystem;
     private GameManager gameManager;
@@ -15,7 +17,8 @@ public class Result : MonoBehaviour
         gameManager = eventSystem.GetComponent<GameManager>();
     }
 
-    void Update() {
+    void Start() {
+        quitButton.onClick.AddListener(gameManager.Title);
         scoreNumberText.SetText(gameManager.score.ToString());
     }
 }

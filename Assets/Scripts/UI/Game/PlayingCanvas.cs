@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Playing : MonoBehaviour {
+public class PlayingCanvas : MonoBehaviour {
 
     private const float COLOR_FADE_RATE = 0.2f;
 
+    public Button pauseButton;
     public TextMeshProUGUI timerNumberText;
     public TextMeshProUGUI scoreNumberText;
     public GameObject videoPanel;
@@ -39,6 +40,7 @@ public class Playing : MonoBehaviour {
     }
 
     void Start() {
+        pauseButton.onClick.AddListener(gameManager.Pause);
         UpdateText();
         GenerateQuestion();
     }
@@ -48,11 +50,11 @@ public class Playing : MonoBehaviour {
         videoPanel.GetComponent<VideoPanel>().isVideoShowed = gameManager.isVideoShowed;
         videoPanel.GetComponent<VideoPanel>().isSoundVisualize = gameManager.isSoundVisualize;
         if (Time.timeScale == 0) {
-            gameManager.GamePause();
+            gameManager.Pause();
             videoPanel.GetComponent<VideoPanel>().PauseClip();
         }
         else {
-            gameManager.GameResume();
+            gameManager.Resume();
             videoPanel.GetComponent<VideoPanel>().ResumeClip();
         }
         if (gameManager.timer < 0) {
@@ -83,7 +85,7 @@ public class Playing : MonoBehaviour {
         videoPanel.GetComponent<VideoPanel>().PlayClip(string.Format("{0:0000}", clipData.clip.GetId()));
     }
 
-    public void ChoiceClicked(Choice choice) {
+    public void ChoiceClicked(ChoiceButton choice) {
         if (choice.isCorrect) {
             soundManager.PlayClip(correctSound, 0.4f);
             gameManager.score += correctScore;

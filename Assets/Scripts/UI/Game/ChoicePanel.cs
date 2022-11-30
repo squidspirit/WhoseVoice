@@ -24,7 +24,7 @@ public class ChoicePanel : MonoBehaviour {
             choiceButton.transform.localScale = new Vector3(1f, 1f, 1f);
             choiceButton.transform.localPosition = new Vector3(0f, currentY, 0f);
             choiceButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().SetText(choices[i]);
-            choiceButton.GetComponent<Choice>().isCorrect = (i == correctIndex);
+            choiceButton.GetComponent<ChoiceButton>().isCorrect = (i == correctIndex);
         }
     }
 
