@@ -1181,8 +1181,6 @@ MonoBehaviour:
   wrongSound: {fileID: 8300000, guid: baf71412fc04ce6459f47fabe7f1afdb, type: 3}
   correctColor: {r: 0.4, g: 1, b: 0, a: 1}
   wrongColor: {r: 1, g: 0, b: 0, a: 1}
-  correctScore: 1
-  wrongTime: 5
   choicesCount: 4
   initTime: 120
   initScore: 0

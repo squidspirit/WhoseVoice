@@ -7,7 +7,6 @@ public class SoundVirtualizeButton : MonoBehaviour {
 
     public Sprite enabledSprite;
     public Sprite disabledSprite;
-    public bool initState;
 
     private GameObject eventSystem;
     private GameManager gameManager;
@@ -20,7 +19,7 @@ public class SoundVirtualizeButton : MonoBehaviour {
         }
         eventSystem = GameObject.FindGameObjectWithTag("GameController");
         gameManager = eventSystem.GetComponent<GameManager>();
-        status = !initState;
+        status = gameManager.difficulty < 2;
         onClick();
     }
 

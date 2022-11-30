@@ -8,7 +8,7 @@ public class Character {
     [SerializeField] private int id;
     [SerializeField] private string name;
 
-    public int GetID() { return id; }
+    public int GetId() { return id; }
     public string GetName() { return name; }
     public int GetCvId() { return cv; }
 }

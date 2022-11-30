@@ -7,7 +7,6 @@ public class VideoShowedButton : MonoBehaviour {
 
     public Sprite enabledSprite;
     public Sprite disabledSprite;
-    public bool initState;
 
     private GameObject eventSystem;
     private GameManager gameManager;
@@ -16,16 +15,22 @@ public class VideoShowedButton : MonoBehaviour {
     void Awake() {
         eventSystem = GameObject.FindGameObjectWithTag("GameController");
         gameManager = eventSystem.GetComponent<GameManager>();
-        status = !initState;
-        onClick();
+        status = gameManager.difficulty < 2;
+        UpdateStatus();
     }
 
     void Start() {
-        gameObject.GetComponent<Button>().onClick.AddListener(onClick);
+        gameObject.GetComponent<Button>().onClick.AddListener(OnClick);
     }
 
-    private void onClick() {
+    private void OnClick() {
+        if (gameManager.difficulty != 0)
+            return;
         status = !status;
+        UpdateStatus();
+    }
+
+    private void UpdateStatus() {
         if (status)
             gameObject.GetComponent<Image>().sprite = enabledSprite;
         else

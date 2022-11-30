@@ -17,11 +17,12 @@ public class PlayingCanvas : MonoBehaviour {
     public AudioClip wrongSound;
     public Color correctColor;
     public Color wrongColor;
-    public int correctScore;
-    public int wrongTime;
     public int choicesCount;
     public float initTime;
     public int initScore;
+
+    private int correctScore;
+    private int wrongTime;
 
     private GameObject eventSystem;
     private GameManager gameManager;
@@ -33,6 +34,8 @@ public class PlayingCanvas : MonoBehaviour {
         gameManager = eventSystem.GetComponent<GameManager>();
         jsonManager = eventSystem.GetComponent<JsonManager>();
         soundManager = eventSystem.GetComponent<SoundManager>();
+        correctScore = PlayerPrefs.GetInt("correctScore");
+        wrongTime = PlayerPrefs.GetInt("wrongTime");
         gameManager.timer = initTime;
         gameManager.score = initScore;
         if (choicesCount > 4) choicesCount = 4;
@@ -77,10 +80,20 @@ public class PlayingCanvas : MonoBehaviour {
     public void GenerateQuestion() {
         ClipAttribute clipData = jsonManager.GetRandomClipData();
         List<string> choices = new List<string>();
-        foreach (var cv in jsonManager.GetRandomCVList(clipData.cv, choicesCount))
-            choices.Add(cv.GetName());
         int correctIndex = Random.Range(0, choicesCount);
-        choices[correctIndex] = clipData.cv.GetName();
+        switch (gameManager.mode) {
+            case 0:
+                foreach (var cv in jsonManager.GetRandomCVList(clipData.cv, choicesCount))
+                    choices.Add(cv.GetName());
+                choices[correctIndex] = clipData.cv.GetName();
+                break;
+            case 1:
+                foreach (var character in jsonManager.GetRandomCharacterList(clipData.character, choicesCount))
+                    choices.Add(character.GetName());
+                choices[correctIndex] = clipData.character.GetName();
+                break;
+            default: break;
+        }
         choicePanel.GetComponent<ChoicePanel>().Generate(choices, correctIndex);
         videoPanel.GetComponent<VideoPanel>().PlayClip(string.Format("{0:0000}", clipData.clip.GetId()));
     }
