@@ -2571,7 +2571,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enabledSprite: {fileID: 21300000, guid: 2ab39c20489326f45a6660274a4521f3, type: 3}
   disabledSprite: {fileID: 21300000, guid: b1c35174a8ff44b4d9855f4e024edf0a, type: 3}
-  initState: 1
 --- !u!114 &1531988432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3254,7 +3253,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enabledSprite: {fileID: 21300000, guid: fdd4b7549c428b740961ebf0e92272f7, type: 3}
   disabledSprite: {fileID: 21300000, guid: aff2b4904ab4f8341a98aa9a57242215, type: 3}
-  initState: 0
 --- !u!1 &1844700325
 GameObject:
   m_ObjectHideFlags: 0
